@@ -1,9 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 5) {
-        for (let index = 0; index < 10; index++) {
-            basic.pause(500)
-            radio.sendNumber(randint(0, 4))
-        }
+        radio.sendNumber(1)
     } else if (receivedNumber == 10) {
         unlock = 15
     } else if (receivedNumber == 15) {
