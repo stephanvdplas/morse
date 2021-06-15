@@ -1,8 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 5) {
+    if (receivedNumber == 12) {
         radio.sendNumber(1)
     } else if (receivedNumber == 10) {
-        unlock = 15
+        basic.showNumber(receivedNumber)
         radio.sendNumber(unlock)
     } else if (receivedNumber == unlock) {
         music.playTone(262, music.beat(BeatFraction.Eighth))
@@ -31,4 +31,5 @@ input.onButtonPressed(Button.A, function () {
 	
 })
 let unlock = 0
+unlock = 15
 radio.setGroup(1)
