@@ -3,7 +3,8 @@ radio.onReceivedNumber(function (receivedNumber) {
         radio.sendNumber(1)
     } else if (receivedNumber == 10) {
         unlock = 15
-    } else if (receivedNumber == 15) {
+        radio.sendNumber(unlock)
+    } else if (receivedNumber == unlock) {
         music.playTone(262, music.beat(BeatFraction.Eighth))
         music.rest(music.beat(BeatFraction.Eighth))
         music.playTone(262, music.beat(BeatFraction.Eighth))
@@ -27,7 +28,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 input.onButtonPressed(Button.A, function () {
-    radio.sendNumber(5)
+	
 })
 let unlock = 0
 radio.setGroup(1)
